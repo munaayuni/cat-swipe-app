@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Cat Swipe App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  </head>
+  <body>
+    <div class="main-container">
+      <h1> Cat Swipe 🐾</h1>
+      <div class="home-buttons" id="home-buttons">
+          <button class="pastel" id="start-button"><i class="fas fa-heart"></i><span class="button-caption"> Start</span>  </button>
+          <button class="pastel" id="about-button"><i class="fas fa-circle-question"></i> <span class="button-caption">About</span></button>
+          <button class="pastel" id="history-button"><i class="fas fa-clock"></i> <span class="button-caption">History</span></button>
+      </div>
+      <div id="spinner-container" class="spinner-container" style="display: none;">
+          <div id='spinner' class="spinner-border" role="status" style="width: 5rem; height: 5rem;margin-bottom: 1rem;"></div>
+          <div class="spinner-text"> Loading cats pictures ! </div>
+      </div>
+      <div class="cat-content" id="cat-content" style="display: none;">
+          <div id="dislike-indicator" class="swipe-indicators">👎</div>
+          <div class="cat-content-center-container">
+              <div id="card-stack"></div>
+              <div class="progress progressBar" id="progressWrapper">
+                <div id= 'myProgressBar' class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+              </div>
+              <span id='card-caption' class="card-caption hidden"> Swipe right to like, and swipe left to dislike</span>
+          </div>
+          <div id="like-indicator" class="swipe-indicators" >❤️</div>
+      </div>
+      <div class="summary-container" id="summary-container" style="display: none;">
+          <div id="summary" class="hidden"></div>
+          <button id="restart-button" class="pastel hidden" style="margin-bottom: 8px;">Choose again ? </button>
+          <button id="return-home-button" class="pastel hidden">Return home</button>
+      </div>
+      <div class="about-container" style="display: none;text-align: start;" id="about-container">
+          <p>
+            Welcome to <strong>CatSwipe</strong> — the fun way to discover random cats from the internet!
+          </p>
+          <ul>
+            <li>👉 Swipe <strong>right</strong> if you like the cat.</li>
+            <li>👈 Swipe <strong>left</strong> if it’s not your vibe.</li>
+            <li>Your favorites will be shown at the end.</li>
+          </ul>
+          <p>
+            🐱 Images are powered by <a href="https://cataas.com" target="_blank" class="text-blue-500 underline">CATAAS (Cat as a Service)</a>.
+          </p>
+          <p class="text-center font-semibold">Made with ❤️ by Muna Ayuni</p>
+          <button id="return-home-button-2" class="pastel hidden">Return home</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
