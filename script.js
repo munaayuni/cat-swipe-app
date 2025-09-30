@@ -183,7 +183,7 @@ function createSummaryContent(catsArray) {
   catsArray.forEach(catUrl => {
     const img = document.createElement("img");
     img.src = catUrl;
-    img.classList.add("w-32", "h-32", "object-cover", "rounded-lg");
+    img.classList.add("w-75", "h-75", "object-cover", "rounded-lg");
     imgContainer.appendChild(img);
   });
 
